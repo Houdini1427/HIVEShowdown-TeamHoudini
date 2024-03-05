@@ -108,7 +108,7 @@ namespace Com.MyCompany.MyGame
             Debug.Log("Sending back reward");
             
             // To be Commented;
-            quantity = 0.001f;
+            // quantity = 0.001f;
             // 
             Debug.Log(recipient);
             Debug.Log(comments);

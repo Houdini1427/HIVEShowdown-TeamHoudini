@@ -53,11 +53,11 @@ namespace Com.MyCompany.MyGame
             PlayerPrefs.SetString(stakeAmtPrefKey, value);
             // float Stake = (float)Math.Round(float.Parse(value), 3);
             float Stake = Utilities.StringToFloat(value);
-            // if (Stake < 0.5f)
-            // {
-            //     powerText.text = "Invalid: Stake needs to be more than 0.5 HIVE";
-            //     return;
-            // }
+            if (Stake < 0.5f)
+            {
+                powerText.text = "Invalid: Stake needs to be more than 0.5 HIVE";
+                return;
+            }
             float Power = Utilities.GetPower(Stake);
             powerText.text = "Provided Power: " + Power.ToString();
         }

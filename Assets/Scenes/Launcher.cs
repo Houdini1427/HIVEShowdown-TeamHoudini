@@ -122,10 +122,10 @@ namespace Com.MyCompany.MyGame
                 string stakeAmt = PlayerPrefs.GetString(stakeAmtPrefKey);
                 string username = PlayerPrefs.GetString(playerNamePrefKey);
                 float stakeFloat = Utilities.StringToFloat(stakeAmt);
-                // if (stakeFloat < 0.5f)
-                // {
-                //     return;
-                // }
+                if (stakeFloat < 0.5f)
+                {
+                    return;
+                }
                 Hive.Instance.Transfer(username, stakeFloat, "Transfering Stake to Contract Account");
             }
             else{
@@ -172,7 +172,7 @@ namespace Com.MyCompany.MyGame
         public void ConnectCallback(string response)
         {
             // TODO: Remove this when deploying
-            response = "true";
+            // response = "true";
             // This Statement is to be removed
             
             if (response == "true")
