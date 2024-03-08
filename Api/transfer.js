@@ -5,6 +5,8 @@ const client = new dhive.Client('https://api.hive.blog');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const express = require('express');
+require('dotenv').config();
+
 const router = express.Router();
 const port = 3000;
 const app = express();
@@ -25,7 +27,7 @@ router.post('/', async (req, res) => {
     try{
         const username = 'user1427';
         const privateKey = dhive.PrivateKey.fromString(
-            '5JKTrnSZ3CFTjFQrsQLPZ8eaEH3tt9Hp6HvstevGfN39FoCKZfS'
+            process.env.PRIVATE_KEY
         );
         const type = 'HIVE';
         const recipient= req.body.recipient;

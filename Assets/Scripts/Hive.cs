@@ -125,7 +125,8 @@ namespace Com.MyCompany.MyGame
             Debug.Log(jsonData);
             
             // Create a new UnityWebRequest
-            UnityWebRequest request = UnityWebRequest.Post("http://localhost:3000", jsonData, "application/json");
+            // UnityWebRequest request = UnityWebRequest.Post("http://localhost:3000", jsonData, "application/json");
+            UnityWebRequest request = UnityWebRequest.Post("https://e971-124-66-173-224.ngrok-free.app", jsonData, "application/json");
             request.SetRequestHeader("Access-Control-Allow-Origin", "*");
             
             // Send the request and wait for a response
